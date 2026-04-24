@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Mic, Send, AlertTriangle, ShieldAlert, CheckCircle2, Volume2, User, Bot, Loader2 } from "lucide-react";
-import { createSession, transcribeAudio, interpretTranscript, verifyResult, submitFeedback } from "@/lib/api";
-import { Badge } from "@/components/ui/badge";
+import { ArrowLeft, Mic, AlertTriangle, ShieldAlert, CheckCircle2, Volume2, User, Bot, Loader2 } from "lucide-react";
+import { createSession, interpretTranscript, verifyResult, submitFeedback } from "@/lib/api";
 
 export default function DemoPage() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [sessionData, setSessionData] = useState<any>(null);
   const [step, setStep] = useState(0); // 0: init, 1: recording/uploading, 2: interpreting, 3: verification, 4: human, 5: done
   const [isMocking, setIsMocking] = useState(false);
@@ -212,7 +212,7 @@ export default function DemoPage() {
                       <Volume2 className="w-5 h-5" />
                     </button>
                     <p className="text-lg font-medium italic text-blue-50 leading-relaxed">
-                      "{sessionData.restatement_question}"
+                      &quot;{sessionData.restatement_question}&quot;
                     </p>
                   </div>
 

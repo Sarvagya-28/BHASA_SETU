@@ -7,6 +7,7 @@ import { getSessions } from "@/lib/api";
 import { Badge } from "@/components/ui/badge";
 
 export default function AdminPage() {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [sessions, setSessions] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
